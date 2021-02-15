@@ -1,19 +1,21 @@
-public class inheritance extends Child {
-    void method1() {
+class Parentclass {
+    public void parentmethod() {
         System.out.println("This is parent class");
-    }
-    public static void main(String[] args) {
-        inheritance obj = new inheritance();
-        Child obj2 = new Child();
-        obj.method1();
-        obj2.method2();
-        obj.method2();
     }
 }
 
-class Child {
-    void method2()
-    {
+class Childclass extends Parentclass {
+    public void childmethod() {
         System.out.println("This is child class");
+    }
+}
+
+class Inheritance {
+    public static void main(String[] args){
+        Parentclass obj1 = new Parentclass();
+        Childclass obj2 = new Childclass();
+        obj1.parentmethod();
+        obj2.childmethod();
+        obj2.parentmethod();
     }
 }
